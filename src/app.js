@@ -11,15 +11,6 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use(express.urlencoded({extended:true}));
 
-app.get('/transfer', function (req, res) { 
-    console.log(req.body); 
-    res.end(); 
-});
-app.post('/transfer', function (req, res) { 
-    console.log(req.body); 
-    res.end(); 
-});
-
 const accountData = fs.readFileSync("src/json/accounts.json", {
   encoding: "utf8",
 });
